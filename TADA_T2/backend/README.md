@@ -1,5 +1,5 @@
 # features.py:
-   - make subsequence can be optimized
+   - make subsequence and turning subseq to seqobs can be optimized
    - 
 
 # model.py:
