@@ -6,19 +6,16 @@ from tensorflow import convert_to_tensor
 
 
 # package imports
-from TADA_T2.backend.features import create_features, scale_features_predict
-from TADA_T2.backend.model import TadaModel
-
+from features import create_features, scale_features_predict
+from model import TadaModel
 def get_model_path():
     ''' 
     Quick function to get back the path to the model.
     '''
-    model_weights_path = importlib.resources.files('TADA_T2.data') / 'tada.14-0.02.hdf5'
+    model_weights_path = importlib.resources.files('./data') / 'tada.14-0.02.hdf5'
     return str(model_weights_path)
-
 # trying to avoid recreating the model multiple times
 model_cache = None  # Global variable to store the model
-
 def predict_tada(sequences, return_both_values=False):
     '''
     Parameters

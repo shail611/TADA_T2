@@ -1,3 +1,16 @@
+# Things needed to install:
+- tensor flow
+pip install tensorflow
+- urllib
+pip install urllib3==1.26.16
+- alphaPredict
+pip install alphaPredict
+- protfasta
+pip install protfasta
+- localcider
+pip install localcider
+
+
 # features.py:
    - make subsequence and turning subseq to seqobs can be optimized
    - This file has 2 methods. One is used to create features and the other is used to scale these features
@@ -9,6 +22,7 @@
 
 # predictor.py:
 - This file is predicting based on the model created in model.py. This file should output whether a particular sequence is a tad or not.
+
 
 # utils.py:
    - This has biology stuff which I dont need to look
