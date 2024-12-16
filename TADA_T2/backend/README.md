@@ -1,14 +1,26 @@
 # Things needed to install:
-- tensor flow
-pip install tensorflow
-- urllib
-pip install urllib3==1.26.16
-- alphaPredict
-pip install alphaPredict
-- protfasta
-pip install protfasta
-- localcider
-pip install localcider
+To set up the necessary dependencies for this project, run the following commands:
+
+- **TensorFlow**:
+    ```bash
+    pip install tensorflow
+    ```
+- **urllib**:
+    ```bash
+    pip install urllib3==1.26.16
+    ```
+- **alphaPredict**:
+    ```bash
+    pip install alphaPredict
+    ```
+- **protfasta**:
+    ```bash
+    pip install protfasta
+    ```
+- **localcider**:
+    ```bash
+    pip install localcider
+    ```
 
 
 # features.py:
