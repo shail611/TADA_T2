@@ -1,6 +1,6 @@
 # features.py:
    - make subsequence and turning subseq to seqobs can be optimized
-   - 
+   - This file has 2 methods. One is used to create features and the other is used to scale these features
 
 # model.py:
    - This has 2 classes TadaModel and Attention.
