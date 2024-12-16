@@ -1,3 +1,7 @@
+# features.py:
+   - make subsequence can be optimized
+   - 
+
 # model.py:
    - This has 2 classes TadaModel and Attention.
    - The class TadaModel has model creation method Conv1d-dropout-Conv1d-dropout-Attention-biLSTM-biLSTM-Dense. Using this sequence because this sequence gave max F1-score according to https://par.nsf.gov/servlets/purl/10426786.
