@@ -26,6 +26,11 @@ This library is for protein sequences generation and preservation.
     ```bash
     pip install pytest
     ```
+- **pandas**:
+    ```bash
+    pip install pandas
+    ```
+
 
 # features.py:
    - make subsequence and turning subseq to seqobs can be optimized
