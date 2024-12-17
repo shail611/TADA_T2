@@ -6,8 +6,8 @@ from tensorflow import convert_to_tensor
 
 
 # package imports
-from features import create_features, scale_features_predict
-from model import TadaModel
+from backend.features import create_features, scale_features_predict
+from backend.model import TadaModel
 def get_model_path():
     ''' 
     Quick function to get back the path to the model.
@@ -61,3 +61,4 @@ def predict_tada(sequences, return_both_values=False):
     if return_both_values:
         return predictions
     return [i[0] for i in predictions]
+

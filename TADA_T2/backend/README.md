@@ -14,6 +14,7 @@ To set up the necessary dependencies for this project, run the following command
     pip install alphaPredict
     ```
 - **protfasta**:
+This library is for protein sequences generation and preservation.
     ```bash
     pip install protfasta
     ```
