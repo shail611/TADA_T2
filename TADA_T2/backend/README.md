@@ -21,7 +21,10 @@ To set up the necessary dependencies for this project, run the following command
     ```bash
     pip install localcider
     ```
-
+- **pytest**:
+    ```bash
+    pip install pytest
+    ```
 
 # features.py:
    - make subsequence and turning subseq to seqobs can be optimized
