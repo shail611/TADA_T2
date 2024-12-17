@@ -148,50 +148,50 @@ pickle.dump(history,open(dataLoc + 'trainingHistory_nosynads.pkl','wb'))
 # let's try swapping this classification task to see what happens
 
 
-# Now for the V1 data
-yTrainV1Flip = 1 - yTrainV1
-yValV1Flip = 1 - yValV1
-yTestV1Flip = 1 - yTestV1
+# # Now for the V1 data
+# yTrainV1Flip = 1 - yTrainV1
+# yValV1Flip = 1 - yValV1
+# yTestV1Flip = 1 - yTestV1
 
-history = History()
-modelCheckpoint = ModelCheckpoint(
-    filepath = checkpointLoc + 'tada.nosynads_flipped.{epoch:02d}-{val_loss:.2f}.weights.h5',
-    save_weights_only = True,
-    monitor = 'val_loss',
-    mode = 'auto',
-    save_best_only = True,         
-)
-earlyStopper = EarlyStopping(
-    monitor = 'val_f1_metric',
-    mode = "max",
-    patience=7,
-    verbose=1,
-)
-callbacks = [
-    history,
-    modelCheckpoint,
-    earlyStopper
-]
+# history = History()
+# modelCheckpoint = ModelCheckpoint(
+#     filepath = checkpointLoc + 'tada.nosynads_flipped.{epoch:02d}-{val_loss:.2f}.weights.h5',
+#     save_weights_only = True,
+#     monitor = 'val_loss',
+#     mode = 'auto',
+#     save_best_only = True,         
+# )
+# earlyStopper = EarlyStopping(
+#     monitor = 'val_f1_metric',
+#     mode = "max",
+#     patience=7,
+#     verbose=1,
+# )
+# callbacks = [
+#     history,
+#     modelCheckpoint,
+#     earlyStopper
+# ]
 
-# Determine class weights
-groundTruth = np.argmax(yTrainV1Flip,axis=-1)
-classWeights = class_weight.compute_class_weight(
-    'balanced',
-    classes = np.unique(groundTruth),
-    y = groundTruth
-)
-classWeightsDict = dict(enumerate(classWeights))
+# # Determine class weights
+# groundTruth = np.argmax(yTrainV1Flip,axis=-1)
+# classWeights = class_weight.compute_class_weight(
+#     'balanced',
+#     classes = np.unique(groundTruth),
+#     y = groundTruth
+# )
+# classWeightsDict = dict(enumerate(classWeights))
 
-# Instantiate model and train
-newModel = TADA_T2.create_model()
-history = newModel.fit(
-    xTrainV1,
-    yTrainV1Flip,
-    batch_size = 64,
-    epochs = 50,
-    verbose = 1,
-    callbacks = callbacks,
-    class_weight = classWeightsDict,
-    validation_data = (xValV1,yValV1Flip)
-)
-pickle.dump(history,open(dataLoc + 'trainingHistory_nosynads_flipped.pkl','wb'))
+# # Instantiate model and train
+# newModel = TADA_T2.create_model()
+# history = newModel.fit(
+#     xTrainV1,
+#     yTrainV1Flip,
+#     batch_size = 64,
+#     epochs = 50,
+#     verbose = 1,
+#     callbacks = callbacks,
+#     class_weight = classWeightsDict,
+#     validation_data = (xValV1,yValV1Flip)
+# )
+# pickle.dump(history,open(dataLoc + 'trainingHistory_nosynads_flipped.pkl','wb'))
