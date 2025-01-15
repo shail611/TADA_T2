@@ -1,0 +1,9 @@
+tensorflow
+urllib3==1.26.16
+alphaPredict
+protfasta
+localcider
+pytest
+pandas
+matplotlib
+seaborn
