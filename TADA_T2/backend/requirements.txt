@@ -7,3 +7,5 @@ pytest
 pandas
 matplotlib
 seaborn
+openpyxl
+scikit-learn
